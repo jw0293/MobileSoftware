@@ -3,19 +3,31 @@ package com.course.msp.domain.dto;
 import android.net.Uri;
 import android.util.Log;
 
-public class FoodInfor {
+import java.io.Serializable;
+
+public class FoodInfor implements Serializable {
 
     private String foodName;
     private String foodCount;
     private String foodFeel;
     private String time;
-    private Uri image;
+    private String position;
+    private String image;
 
-    public Uri getImage() {
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public String getImage() {
         return image;
     }
 
-    public void setImage(Uri image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

@@ -11,9 +11,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.course.msp.R;
+import com.course.msp.domain.dto.FoodInfor;
 import com.course.msp.repository.FoodInformationRepository;
 
-public class DBActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class DateDBActivity extends AppCompatActivity {
 
     private RecyclerView myRecyclerView;
     private RecyclerView.LayoutManager myLayoutManager;
@@ -21,7 +24,8 @@ public class DBActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.show_meal_list);
+
+        setContentView(R.layout.show_meal_date);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -32,7 +36,7 @@ public class DBActivity extends AppCompatActivity {
         myLayoutManager = new LinearLayoutManager(this);
         myRecyclerView.setLayoutManager(myLayoutManager);
 
-        MyAdapter myAdapter = new MyAdapter(getApplicationContext(), FoodInformationRepository.getFoodInfor());
+        MyAdapter myAdapter = new MyAdapter(getApplicationContext(), (ArrayList<FoodInfor>) getIntent().getSerializableExtra("foodInfor"));
         // 어댑터를 뷰에 연결해 준다.
         myRecyclerView.setAdapter(myAdapter);
     }

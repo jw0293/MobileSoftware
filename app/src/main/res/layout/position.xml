@@ -7,36 +7,22 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="620dp"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="0dp">
 
-        <EditText
-            android:id="@+id/inputPosition"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="95dp"
-            android:layout_marginRight="95dp"
-            android:ems="10"
-            android:hint="한글 주소 입력"
-            android:inputType="textPersonName"
-            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/showPosition"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/position_show" />
 
         <Button
-            android:id="@+id/checkPosition"
-            android:layout_width="111dp"
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="7dp"
-            android:layout_marginEnd="2dp"
-            android:layout_marginRight="2dp"
-            android:text="확인" />
+            android:gravity="center_horizontal"
+            android:text="@string/save_position" />
 
         <FrameLayout
             android:layout_width="wrap_content"
@@ -45,7 +31,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/map"
-                tools:context=".MapActicity"
                 class="com.google.android.gms.maps.SupportMapFragment"/>
         </FrameLayout>
 

@@ -29,7 +29,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
         android:autoSizeMaxTextSize="@dimen/activity_horizontal_margin"
-        android:gravity="center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
         android:text="@string/inforName"
         app:layout_constraintEnd_toStartOf="@+id/inforCount"
         app:layout_constraintHorizontal_bias="0.121"
@@ -43,20 +43,19 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
         android:autoSizeMaxTextSize="@dimen/activity_horizontal_margin"
-        android:gravity="center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
         android:text="@string/inforCount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/showImage" />
 
     <TextView
         android:id="@+id/inforDate"
-        android:layout_width="199dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="24dp"
-        android:gravity="center|center_horizontal"
+        android:layout_width="196dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center|center_horizontal|center_vertical"
         android:text="@string/inforDate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout2" />
 
@@ -65,7 +64,7 @@
         android:layout_width="349dp"
         android:layout_height="70dp"
         android:layout_marginBottom="16dp"
-        android:gravity="center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
         android:text="@string/inforFeel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,12 +72,24 @@
 
     <ImageView
         android:id="@+id/showImage"
-        android:layout_width="337dp"
-        android:layout_height="354dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="344dp"
+        android:layout_height="367dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inforDate"
         app:srcCompat="@drawable/ic_menu_gallery" />
+
+    <TextView
+        android:id="@+id/showPosInfo"
+        android:layout_width="177dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/show_position_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

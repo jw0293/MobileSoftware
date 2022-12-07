@@ -34,4 +34,9 @@
     <string name="backButton">뒤로가기</string>
     <string name="chooseTime">[선택]</string>
     <string name="googlemap">현 위치 설정</string>
+    <string name="position_show">현 위치 보여주기</string>
+    <string name="save_position">위치 저장하기</string>
+    <string name="show_position_info">식사 위치 확인</string>
+    <string name="message_print">확인하고 싶은 날짜를 선택하세요!</string>
+    <string name="check_what_eat">확인하기</string>
 </resources>

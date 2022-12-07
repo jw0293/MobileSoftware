@@ -2,25 +2,18 @@ package com.course.msp.ui.gallery;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.course.msp.R;
 import com.course.msp.controller.DBActivity;
-import com.course.msp.controller.Foods;
 import com.course.msp.controller.MyAdapter;
 import com.course.msp.databinding.FragmentGalleryBinding;
-
-import java.util.ArrayList;
 
 public class GalleryFragment extends Fragment {
 

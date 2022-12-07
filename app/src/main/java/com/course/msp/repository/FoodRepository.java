@@ -1,7 +1,6 @@
 package com.course.msp.repository;
 
 
-import com.course.msp.controller.Foods;
 import com.course.msp.domain.dto.FoodDto;
 
 import java.util.ArrayList;

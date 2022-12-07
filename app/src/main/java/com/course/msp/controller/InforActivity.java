@@ -40,7 +40,7 @@ public class InforActivity extends AppCompatActivity {
         initIntentInfor(getIntent());
 
         ImageView image = (ImageView) findViewById(R.id.showImage);
-        image.setImageURI(foodInfor.getImage());
+        image.setImageURI(Uri.parse(foodInfor.getImage()));
 
         TextView nameView = (TextView) findViewById(R.id.inforName);
         nameView.setText(foodInfor.getFoodName());
@@ -54,6 +54,8 @@ public class InforActivity extends AppCompatActivity {
         TextView dateView = (TextView) findViewById(R.id.inforDate);
         dateView.setText(foodInfor.getTime());
 
+        TextView posView = (TextView) findViewById(R.id.showPosInfo);
+        posView.setText(foodInfor.getPosition());
     }
 
     @Override
@@ -76,7 +78,8 @@ public class InforActivity extends AppCompatActivity {
         this.foodInfor.setFoodCount(intent.getStringExtra("countInfor"));
         this.foodInfor.setFoodFeel(intent.getStringExtra("feelInfor"));
         this.foodInfor.setTime(intent.getStringExtra("dateInfor"));
-        this.foodInfor.setImage(Uri.parse(intent.getStringExtra("imageInfor")));
+        this.foodInfor.setImage(intent.getStringExtra("imageInfor"));
+        this.foodInfor.setPosition(intent.getStringExtra("positionInfor"));
     }
 
     @Override

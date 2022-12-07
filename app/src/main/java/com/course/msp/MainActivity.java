@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
-import com.course.msp.ui.meal.InputActivity;
+import com.course.msp.controller.InputActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 

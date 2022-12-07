@@ -59,8 +59,22 @@
             android:exported="true">
         </activity>
 
+        <activity android:name=".controller.CalenderActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MSP.NoActionBar">
+
+        <intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="" />
+        </activity>
+
         <activity
-            android:name=".ui.meal.InputActivity"
+            android:name=".controller.InputActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MSP.NoActionBar">
@@ -89,7 +103,7 @@
                 android:value="" />
         </activity>
 
-        <activity android:name=".controller.MapActicity"
+        <activity android:name=".controller.MapActivity"
             android:exported="true"
             android:label="@string/app_name">
 
@@ -115,6 +129,20 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+        </activity>
+
+        <activity android:name=".controller.DateDBActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MSP.NoActionBar">
+
+        <intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="" />
         </activity>
 
     </application>

@@ -74,7 +74,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 intent.putExtra("countInfor", foodInfor.getFoodCount());
                 intent.putExtra("feelInfor", foodInfor.getFoodFeel());
                 intent.putExtra("dateInfor", foodInfor.getTime());
-                intent.putExtra("imageInfor", foodInfor.getImage().toString());
+                intent.putExtra("imageInfor", foodInfor.getImage());
+                intent.putExtra("positionInfor", foodInfor.getPosition());
 
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 

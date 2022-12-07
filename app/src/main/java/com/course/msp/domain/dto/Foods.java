@@ -1,4 +1,4 @@
-package com.course.msp.controller;
+package com.course.msp.domain.dto;
 
 public class Foods {
 

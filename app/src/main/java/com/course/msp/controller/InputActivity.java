@@ -1,4 +1,4 @@
-package com.course.msp.ui.meal;
+package com.course.msp.controller;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -28,22 +27,15 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.FileProvider;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import com.course.msp.MainActivity;
 import com.course.msp.R;
 import com.course.msp.contents.MyContentProvider;
-import com.course.msp.controller.MapActicity;
-import com.course.msp.databinding.ActivityMainBinding;
 import com.course.msp.domain.dto.FoodDto;
 import com.course.msp.domain.dto.FoodInfor;
+import com.course.msp.repository.DateRepository;
 import com.course.msp.repository.FoodInformationRepository;
 import com.course.msp.repository.FoodRepository;
-import com.google.android.material.navigation.NavigationView;
 
 import java.io.File;
 import java.io.IOException;
@@ -64,12 +56,6 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
     private String resultTime;
     private Spinner spinner;
     private static final String[] mealTime = {"선택하세요", "아침", "점심", "저녁"};
-
-    public ArrayList<FoodDto> getFoodDto(){
-        return FoodRepository.getFoods();
-    }
-
-
 
     private void setDate(String date){
         this.date = date;
@@ -94,7 +80,6 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
 
         spinner = (Spinner) this.findViewById(R.id.spinner1);
 
@@ -125,7 +110,7 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
         posButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MapActicity.class);
+                Intent intent = new Intent(getApplicationContext(), MapActivity.class);
                 startActivity(intent);
             }
         });
@@ -228,20 +213,24 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
         Log.d("DEATIL", resultTime);
 
 
-        FoodDto foodDto = new FoodDto(photoUri, resultTime);
         FoodInfor foodInfor = new FoodInfor();
 
         foodInfor.setFoodName(((EditText) findViewById(R.id.inputFoodName)).getText().toString());
         foodInfor.setFoodCount(((EditText) findViewById(R.id.inputFoodCount)).getText().toString());
         foodInfor.setFoodFeel(((EditText) findViewById(R.id.inputFoodFeel)).getText().toString());
+        foodInfor.setPosition(getIntent().getStringExtra("positionInfor"));
         foodInfor.setTime(resultTime);
-        foodInfor.setImage(photoUri);
+        foodInfor.setImage(photoUri.toString());
+
+
 
         FoodInformationRepository.addFoodInfor(foodInfor);
-        FoodRepository.addFood(foodDto);
+        DateRepository.addDate(date, foodInfor);
 
         getContentResolver().insert(MyContentProvider.CONTENT_URI, addValues);
         Toast.makeText(getBaseContext(), "Record Added", Toast.LENGTH_LONG).show();
+
+        Log.d("dd", "Main으로 넘ㅇ가야ㅏㄴㄴ데");
 
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
@@ -283,20 +272,6 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
             }
         }
     }
-//
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data)    {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        // 카메라 촬영을 하면 이미지뷰에 사진 삽입
-//        if(requestCode == 0 && resultCode == RESULT_OK) {
-//            // 이미지뷰에 파일경로의 사진을 가져와 출력
-//            imageView.setImageURI(photoUri);
-//        } else if (requestCode == REQUEST_CODE) {
-//            photoUri = data.getData();
-//        }
-//    }
-
 
     // ImageFile의 경로를 가져올 메서드 선언
     private File createImageFile() throws IOException {
