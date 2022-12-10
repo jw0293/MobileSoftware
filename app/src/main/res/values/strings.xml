@@ -48,9 +48,9 @@
     <string name="ask_eat">오늘은 무엇을 먹었나요?</string>
     <string name="introduce_add">오늘의 식단은 어땟는지 궁금해요!</string>
     <string name="recent_food">최근 섭취한 음식</string>
-    <string name="Kcal">총 칼로리량:</string>
-    <string name="carbohydrate">탄수화물:</string>
-    <string name="protein">단백질:</string>
-    <string name="fat">지방:</string>
+    <string name="Kcal">총 칼로리량</string>
+    <string name="carbohydrate">탄수화물</string>
+    <string name="protein">단백질</string>
+    <string name="fat">지방</string>
     <string name="gram">g</string>
 </resources>

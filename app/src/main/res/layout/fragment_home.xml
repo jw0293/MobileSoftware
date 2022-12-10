@@ -139,8 +139,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/home_talk_style"
             android:fontFamily="@font/dalseohealingbold"
+            android:gravity="center"
             android:text="@string/Kcal"
             android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/linearLayout4"
@@ -165,21 +167,22 @@
             android:id="@+id/total_kacl_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:fontFamily="@font/dalseohealingbold"
             android:text="0"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/textView10"
             app:layout_constraintStart_toEndOf="@+id/textView10"
-            app:layout_constraintTop_toTopOf="@+id/textView10"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="@+id/textView10" />
 
         <TextView
             android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/home_talk_style"
             android:fontFamily="@font/dalseohealingbold"
+            android:gravity="center"
             android:text="@string/carbohydrate"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/textView10"
@@ -189,8 +192,10 @@
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/home_talk_style"
             android:fontFamily="@font/dalseohealingbold"
+            android:gravity="center"
             android:text="@string/protein"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/textView15"
@@ -200,8 +205,10 @@
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/home_talk_style"
             android:fontFamily="@font/dalseohealingbold"
+            android:gravity="center"
             android:text="@string/fat"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/textView16"
@@ -272,6 +279,16 @@
             app:layout_constraintBottom_toBottomOf="@+id/total_fat_value"
             app:layout_constraintStart_toEndOf="@+id/total_fat_value"
             app:layout_constraintTop_toTopOf="@+id/total_fat_value" />
+
+        <View
+            android:id="@+id/divide_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            android:background="@color/white"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
