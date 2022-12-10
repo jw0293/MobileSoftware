@@ -32,13 +32,16 @@
 
     <TextView
         android:id="@+id/message_show"
-        android:layout_width="234dp"
-        android:layout_height="55dp"
+        android:layout_width="250dp"
+        android:layout_height="42dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="98dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/dalseohealingbold"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/message_print" />
+        android:text="@string/message_print"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/checkAte"
@@ -46,8 +49,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="35dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/button_pattern"
+        android:drawableStart="@drawable/image_in_check"
+        android:fontFamily="@font/dalseohealingbold"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/check_what_eat" />
 

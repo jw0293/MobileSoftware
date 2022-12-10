@@ -23,57 +23,22 @@
 
 
     <TextView
-        android:id="@+id/inforName"
-        android:layout_width="149dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        android:autoSizeMaxTextSize="@dimen/activity_horizontal_margin"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/inforName"
-        app:layout_constraintEnd_toStartOf="@+id/inforCount"
-        app:layout_constraintHorizontal_bias="0.121"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showImage" />
-
-    <TextView
-        android:id="@+id/inforCount"
-        android:layout_width="153dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        android:autoSizeMaxTextSize="@dimen/activity_horizontal_margin"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/inforCount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showImage" />
-
-    <TextView
         android:id="@+id/inforDate"
-        android:layout_width="196dp"
-        android:layout_height="46dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/dalseohealingbold"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="@string/inforDate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout2" />
 
-    <TextView
-        android:id="@+id/inforFeel"
-        android:layout_width="349dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/inforFeel"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <ImageView
         android:id="@+id/showImage"
-        android:layout_width="344dp"
-        android:layout_height="367dp"
+        android:layout_width="345dp"
+        android:layout_height="370dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -83,13 +48,116 @@
 
     <TextView
         android:id="@+id/showPosInfo"
-        android:layout_width="177dp"
-        android:layout_height="44dp"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/dalseohealingbold"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/show_position_info"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/inforDate"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/show_like_talk"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showImage">
+
+        <TextView
+            android:id="@+id/show_food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/dalseohealingbold"
+            android:gravity="center"
+            android:text="@string/inputFoodName"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/inforName"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:autoSizeMaxTextSize="@dimen/activity_horizontal_margin"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/dalseohealingbold"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/inforName" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/show_like_talk"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/show_food_review"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/dalseohealingbold"
+            android:gravity="center"
+            android:text="@string/inputFoodFeel"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/inforFeel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/dalseohealingbold"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/inforFeel" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/show_like_talk"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showImage">
+
+        <TextView
+            android:id="@+id/show_food_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/dalseohealingbold"
+            android:gravity="center"
+            android:text="@string/inputFoodCount"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/inforCount"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:autoSizeMaxTextSize="@dimen/activity_horizontal_margin"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/dalseohealingbold"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/inforCount" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

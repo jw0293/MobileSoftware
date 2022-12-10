@@ -14,6 +14,7 @@
             android:id="@+id/showPosition"
             android:layout_width="match_parent"
             android:layout_height="58dp"
+            android:fontFamily="@font/dalseohealingbold"
             android:gravity="center_horizontal|center_vertical"
             android:text="@string/position_show" />
 
@@ -21,6 +22,7 @@
             android:id="@+id/saveButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/dalseohealingbold"
             android:gravity="center_horizontal"
             android:text="@string/save_position" />
 
