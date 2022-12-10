@@ -14,10 +14,13 @@
         android:id="@+id/dateView"
         android:layout_width="259dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_gravity="center_vertical"
-        android:textSize="24sp"
-        android:text="@+id/text_explanation" />
+        android:layout_weight="1"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/dalseohealingbold"
+        android:text="@+id/text_explanation"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
 
     <Space
         android:layout_width="wrap_content"

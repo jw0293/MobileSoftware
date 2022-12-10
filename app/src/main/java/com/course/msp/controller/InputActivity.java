@@ -72,7 +72,7 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.input_meal);
+        setContentView(R.layout.input_meal_fixing);
 
         this.InitializeListenerDate();
         this.InitializeListenerTime();
@@ -228,7 +228,7 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
         DateRepository.addDate(date, foodInfor);
 
         getContentResolver().insert(MyContentProvider.CONTENT_URI, addValues);
-        Toast.makeText(getBaseContext(), "Record Added", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "저장되었습니다:)", Toast.LENGTH_LONG).show();
 
         Log.d("dd", "Main으로 넘ㅇ가야ㅏㄴㄴ데");
 

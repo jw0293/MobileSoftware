@@ -36,7 +36,7 @@ public class InforActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Log.d("INFO" , "왜 안될까 게씨빌");
+        Log.d("INFO" , "왜 ?");
         initIntentInfor(getIntent());
 
         ImageView image = (ImageView) findViewById(R.id.showImage);
