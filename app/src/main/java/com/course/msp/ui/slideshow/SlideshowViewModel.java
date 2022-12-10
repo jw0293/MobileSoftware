@@ -10,7 +10,7 @@ public class SlideshowViewModel extends ViewModel {
 
     public SlideshowViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("날짜별 보기 로딩중~");
     }
 
     public LiveData<String> getText() {
