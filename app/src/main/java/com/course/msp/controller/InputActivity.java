@@ -222,8 +222,6 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
         foodInfor.setTime(resultTime);
         foodInfor.setImage(photoUri.toString());
 
-
-
         FoodInformationRepository.addFoodInfor(foodInfor);
         DateRepository.addDate(date, foodInfor);
 

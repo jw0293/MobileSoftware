@@ -27,4 +27,14 @@ public class FoodInformationRepository {
         return Uri.parse(foodInfors.get(foodInfors.size()-1).getImage());
     }
 
+    public static String getLastFoodName(){
+        if(foodInfors.isEmpty()) return null;
+        return foodInfors.get(foodInfors.size()-1).getFoodName();
+    }
+
+    public static String getLastCount(){
+        if(foodInfors.isEmpty()) return null;
+        return foodInfors.get(foodInfors.size()-1).getFoodCount();
+    }
+
 }

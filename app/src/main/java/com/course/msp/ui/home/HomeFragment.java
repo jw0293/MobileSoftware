@@ -13,12 +13,16 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.course.msp.R;
 import com.course.msp.controller.CalenderActivity;
 import com.course.msp.databinding.FragmentHomeBinding;
+import com.course.msp.repository.FoodInformationRepository;
+import com.course.msp.repository.SaveFoodRepository;
 
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
+    // private TextView totalCal, carbo, protein, fat;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -29,7 +33,16 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
 
         final ImageView imageView  = binding.imageView3;
-        homeViewModel.getLiveData().observe(getViewLifecycleOwner(), uri -> imageView.setImageURI(Uri.parse(uri)));
+        final TextView totalCal = binding.totalKaclValue;
+        final TextView totalCarbo = binding.totalCarboValue;
+        final TextView totalProtein = binding.totalProteinValue;
+        final TextView totalFat = binding.totalFatValue;
+
+        homeViewModel.getLiveData().observe(getViewLifecycleOwner(), ur -> imageView.setImageURI(Uri.parse(ur)));
+        homeViewModel.getLiveTotalCal().observe(getViewLifecycleOwner(), cal -> totalCal.setText(cal));
+        homeViewModel.getLiveCarbo().observe(getViewLifecycleOwner(), carbo -> totalCarbo.setText(carbo));
+        homeViewModel.getLiveProtein().observe(getViewLifecycleOwner(), pro -> totalProtein.setText(pro));
+        homeViewModel.getLiveFat().observe(getViewLifecycleOwner(), fat -> totalFat.setText(fat));
 
         return root;
     }

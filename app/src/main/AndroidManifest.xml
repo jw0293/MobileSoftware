@@ -46,6 +46,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCbORbVtQIrQkYOvjQMmVn4paH0PEeAGc0" />
 
+
         <provider
             android:name="com.course.msp.contents.MyContentProvider"
             android:authorities="com.course.msp.contents.MyContentProvider"

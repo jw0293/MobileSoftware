@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.Menu;
 
 import com.course.msp.controller.InputActivity;
+import com.course.msp.repository.SaveFoodRepository;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        SaveFoodRepository.init();
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
